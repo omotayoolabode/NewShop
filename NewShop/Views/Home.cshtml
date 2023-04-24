@@ -1,0 +1,822 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = null;
+}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <title>Ashor By Lola</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendors/bootstrap-selector/css/bootstrap-select.min.css">
+    <!--icon font css-->
+    <link rel="stylesheet" href="/vendors/themify-icon/themify-icons.css">
+    <link rel="stylesheet" href="/vendors/flaticon/flaticon.css">
+    <link rel="stylesheet" href="/vendors/animation/animate.css">
+    <link rel="stylesheet" href="/vendors/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/vendors/magnify-pop/magnific-popup.css">
+    <link rel="stylesheet" href="/vendors/slick/slick.css">
+    <link rel="stylesheet" href="/vendors/slick/slick-theme.css">
+    <link rel="stylesheet" href="/vendors/nice-select/nice-select.css">
+    <link rel="stylesheet" href="/vendors/scroll/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="vendors/splitting/splitting.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body>
+    <div id="preloader">
+        <div id="ctn-preloader" class="ctn-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="H" class="letters-loading">
+                        H
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                    <span data-text-preloader="R" class="letters-loading">
+                        R
+                    </span>
+                    <span data-text-preloader="" class="letters-loading">
+
+                    </span>
+                    <span data-text-preloader="B" class="letters-loading">
+                        B
+                    </span>
+                    <span data-text-preloader="Y" class="letters-loading">
+                        Y
+                    </span>
+                    <span data-text-preloader="" class="letters-loading">
+
+                    </span>
+
+                    <span data-text-preloader="L" class="letters-loading">
+                        L
+                    </span>
+
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+
+                    <span data-text-preloader="L" class="letters-loading">
+                        L
+                    </span>
+
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body_wrapper">
+        <header class="header_area">
+            <nav class="navbar navbar-expand-lg menu_one menu_four shop_menu">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="/img/home-shop/logodark.png"
+                             srcset="img/home-shop/logodark@2x.png 2x" alt="logo">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu_toggle">
+                            <span class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                            <span class="hamburger-cross">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav menu ml-auto mr-auto">
+                            <li class="nav-item dropdown submenu mega_menu mega_menu_two active">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="dropdown submenu nav-item">
+                                <a title="Pages" class="dropdown-toggle nav-link"
+                                   data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                                   href="#">Pages</a>
+                            </li>
+                            <li class="nav-item dropdown submenu mega_menu">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    Portfolio
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="alter_nav">
+                            <ul class="navbar-nav search_cart menu">
+                                <li class="nav-item search">
+                                    <a class="nav-link search-btn" href="javascript:void(0);">
+                                        <i class="ti-search"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item shpping-cart dropdown submenu">
+                                    <a class="cart-btn nav-link dropdown-toggle" href="#" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="ti-shopping-cart"></i><span class="num">2</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="cart-single-item clearfix">
+                                            <div class="cart-img">
+                                                <img src="/img/cart1.jpg" alt="styler">
+                                            </div>
+                                            <div class="cart-content text-left">
+                                                <p class="cart-title"><a href="#">Pale pink and black buttoned dress</a></p>
+                                                <p><del>$400.00</del> - $350.00</p>
+                                            </div>
+                                            <div class="cart-remove">
+                                                <a href="#" class="action"><span class="ti-close"></span></a>
+                                            </div>
+                                        </li>
+                                        <li class="cart-single-item clearfix">
+                                            <div class="cart-img">
+                                                <img src="/img/cart2.jpg" alt="styler">
+                                            </div>
+                                            <div class="cart-content text-left">
+                                                <p class="cart-title">
+                                                    <a href="#">Vera bradley lug- gage large duffel</a>
+                                                </p>
+                                                <p>$350.00</p>
+                                            </div>
+                                            <div class="cart-remove">
+                                                <a href="#" class="action"><span class="ti-close"></span></a>
+                                            </div>
+                                        </li>
+                                        <li class="cart_f">
+                                            <div class="cart-pricing">
+                                                <p class="total">
+                                                    Subtotal :<span class="p-total text-right">$358.00</span>
+                                                </p>
+                                            </div>
+                                            <div class="cart-button text-center">
+                                                <button class="btn btn-cart get_btn pink">View Cart</button>
+                                                <button class="btn btn-cart get_btn dark">Checkout</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+        <section class="gadget_slider_area">
+            <div class="slider_item" style="background: #fdd2d5;">
+                <div class="container">
+                    <div class="row height">
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="shop_slider_content">
+                                <h6>
+                                    <span class="line" data-animation="fadeInLeft" data-delay="0.2s"></span><span data-splitting>Digital Device</span>
+                                </h6>
+                                <h3 data-animation="fadeInUp" data-delay="0.5s">The New Summer Collection</h3>
+                                <a href="#" data-animation="fadeInUp" data-delay="0.7s"
+                                   class="gadget_btn border_radius_none">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <div class="gadget_slider_img shop_slider_img" data-animation="fadeInRight"
+                                 data-delay="0.5s">
+                                <div class="round" data-animation="zoomIn" data-delay="0.7s"></div>
+                                <img src="img/home-shop/fashion1.png" alt="watch">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider_item" style="background: #fcd5c8;">
+                <div class="container">
+                    <div class="row height">
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="shop_slider_content">
+                                <h6>
+                                    <span class="line" data-animation="fadeInLeft" data-delay="0.3s"></span><span data-splitting>Digital Device</span>
+                                </h6>
+                                <h3 data-animation="fadeInUp" data-delay="0.5s">The New Summer Collection</h3>
+                                <a href="#" data-animation="fadeInUp" data-delay="0.7s"
+                                   class="gadget_btn border_radius_none">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <div class="gadget_slider_img" data-animation="fadeInRight" data-delay="0.5s">
+                                <div class="round" data-animation="zoomIn" data-delay="0.7s"></div>
+                                <img src="img/home-shop/fashion2.png" alt="vr">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider_item" style="background: #d9eade;">
+                <div class="container">
+                    <div class="row height">
+                        <div class="col-md-6 d-flex align-items-center">
+                            <div class="shop_slider_content">
+                                <h6>
+                                    <span class="line" data-animation="fadeInLeft" data-delay="0.3s"></span><span data-animation="fadeInRight" data-delay="0.6s">Digital Device</span>
+                                </h6>
+                                <h3 data-animation="fadeInUp" data-delay="0.5s">The New Summer Collection</h3>
+                                <a href="#" data-animation="fadeInUp" data-delay="0.7s"
+                                   class="gadget_btn border_radius_none">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-end">
+                            <div class="gadget_slider_img" data-animation="fadeInRight" data-delay="0.5s">
+                                <div class="round" data-animation="zoomIn" data-delay="0.7s"></div>
+                                <img src="img/home-shop/fashion3.png" alt="headphone">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop_featured_gallery_area">
+            <div class="container">
+                <div class="row featured_gallery">
+                    <div class="grid-item col-sm-6">
+                        <div class="shop_featured_item">
+                            <img src="img/home-shop/mans.jpg" alt="">
+                            <div class="shop_content">
+                                <h5>Accessories</h5>
+                                <a href="product-details-1.html" class="shop_btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 grid-item">
+                        <div class="shop_featured_item">
+                            <img src="img/home-shop/women.jpg" alt="">
+                            <div class="shop_content">
+                                <h5>Accessories</h5>
+                                <a href="product-details-1.html" class="shop_btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-col-2 grid-item">
+                        <div class="shop_featured_item">
+                            <img src="img/home-shop/bag.jpg" alt="">
+                            <div class="shop_content">
+                                <h5>Bags</h5>
+                                <a href="product-details-1.html" class="shop_btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-col-2 grid-item">
+                        <div class="shop_featured_item">
+                            <img src="img/home-shop/shoe.jpg" alt="">
+                            <div class="shop_content">
+                                <h5>Footwear</h5>
+                                <a href="product-details-1.html" class="shop_btn">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="shop_product_area sec_pad">
+            <div class="container">
+                <div class="shop_title mb_60 text-center">
+                    <h2>New Arrival</h2>
+                </div>
+                <div id="pr_filter" class="product_filter mb_60">
+                    <div data-filter=".tops" class="work_portfolio_item active">Tops</div>
+                    <div data-filter=".jean" class="work_portfolio_item">Jeans</div>
+                    <div data-filter=".shirt" class="work_portfolio_item">Shirts</div>
+                    <div data-filter=".shoe" class="work_portfolio_item">Shoes</div>
+                    <div data-filter=".bag" class="work_portfolio_item">Bags</div>
+                    <div data-filter=".accessores" class="work_portfolio_item">Accessores</div>
+                </div>
+                <div class="row product_gallery mb_30" id="pr_gallery">
+                    <div class="col-lg-3 col-sm-4 portfolio-item wow fadeInUp tops jean">
+                        <div class="gadget_pr_item">
+                            <div class="pr_img">
+                                <div class="badge new">New</div>
+                                <a href="product-details-1.html"><img src="img/home-shop/new_pr_1.jpg" alt=""></a>
+                                <div class="hover_content">
+                                    <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                    <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single_pr_details">
+                                <a href="product-details-1.html">
+                                    <h3>Smart Speaker</h3>
+                                </a>
+                                <div class="price">
+                                    <del>$199.00</del>
+                                    <ins>$293.00</ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 portfolio-item wow fadeInUp tops shirt" data-wow-delay="0.2s">
+                        <div class="gadget_pr_item">
+                            <div class="pr_img">
+                                <div class="badge hot">Hot</div>
+                                <a href="product-details-1.html"><img src="img/home-shop/new_pr_2.jpg" alt=""></a>
+                                <div class="hover_content">
+                                    <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                    <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single_pr_details">
+                                <a href="product-details-1.html">
+                                    <h3>Smart Mouse</h3>
+                                </a>
+                                <div class="price">
+                                    <ins>$193.00</ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 wow fadeInUp tops bag">
+                        <div class="gadget_pr_item">
+                            <div class="pr_img">
+                                <div class="badge new">New</div>
+                                <a href="product-details-1.html"><img src="img/home-shop/new_pr_3.jpg" alt=""></a>
+                                <div class="hover_content">
+                                    <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                    <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single_pr_details">
+                                <a href="product-details-1.html">
+                                    <h3>Smart Speaker</h3>
+                                </a>
+                                <div class="price">
+                                    <del>$199.00</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 wow fadeInUp tops accessores" data-wow-delay="0.2s">
+                        <div class="gadget_pr_item">
+                            <div class="pr_img">
+                                <div class="badge hot">Hot</div>
+                                <a href="product-details-1.html"><img src="img/home-shop/new_pr_4.jpg" alt=""></a>
+                                <div class="hover_content">
+                                    <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                    <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single_pr_details">
+                                <a href="product-details-1.html">
+                                    <h3>Smart Mouse</h3>
+                                </a>
+                                <div class="price">
+                                    <ins>$193.00</ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 wow fadeInUp tops">
+                        <div class="gadget_pr_item">
+                            <div class="pr_img">
+                                <div class="badge">Sale</div>
+                                <a href="product-details-1.html"><img src="img/home-shop/new_pr_5.jpg" alt=""></a>
+                                <div class="hover_content">
+                                    <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                    <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single_pr_details">
+                                <a href="product-details-1.html">
+                                    <h3>Smart Speaker</h3>
+                                </a>
+                                <div class="price">
+                                    <del>$199.00</del>
+                                    <ins>$293.00</ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 wow fadeInUp tops" data-wow-delay="0.2s">
+                        <div class="gadget_pr_item">
+                            <div class="pr_img">
+                                <a href="product-details-1.html"><img src="img/home-shop/new_pr_6.jpg" alt=""></a>
+                                <div class="hover_content">
+                                    <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                    <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single_pr_details">
+                                <a href="product-details-1.html">
+                                    <h3>Smart Mouse</h3>
+                                </a>
+                                <div class="price">
+                                    <ins>$193.00</ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 wow fadeInUp tops">
+                        <div class="gadget_pr_item">
+                            <div class="pr_img">
+                                <div class="badge">Sale</div>
+                                <a href="product-details-1.html"><img src="img/home-shop/new_pr_7.jpg" alt=""></a>
+                                <div class="hover_content">
+                                    <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                    <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single_pr_details">
+                                <a href="product-details-1.html">
+                                    <h3>Smart Speaker</h3>
+                                </a>
+                                <div class="price">
+                                    <del>$199.00</del>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 wow fadeInUp tops" data-wow-delay="0.2s">
+                        <div class="gadget_pr_item">
+                            <div class="pr_img">
+                                <a href="product-details-1.html"><img src="img/home-shop/new_pr_8.jpg" alt=""></a>
+                                <div class="hover_content">
+                                    <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                    <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="single_pr_details">
+                                <a href="product-details-1.html">
+                                    <h3>Smart Mouse</h3>
+                                </a>
+                                <div class="price">
+                                    <ins>$193.00</ins>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trending_product_area sec_pad">
+            <img class="pattern" src="img/home-shop/pattern.png" alt="">
+            <div class="container">
+                <div class="row align-items-center mb_70">
+                    <div class="col-sm-9">
+                        <div class="shop_title">
+                            <h2 class="w_color">Trending Products</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="custom_arrow text-right">
+                            <button class="prev"><i class="ti-arrow-left"></i></button>
+                            <button class="next"><i class="ti-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="tr_pr_left"></div>
+                <div class="tr_pr_right">
+                    <div class="row trending_product_slider">
+                        <div class="col-lg-12 item">
+                            <div class="gadget_pr_item one">
+                                <div class="pr_img">
+                                    <div class="badge new">New</div>
+                                    <a href="product-details-1.html"><img src="img/home-shop/tr_pr1.jpg" alt=""></a>
+                                    <div class="hover_content">
+                                        <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                        <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="single_pr_details">
+                                    <a href="product-details-1.html">
+                                        <h3>Smart Speaker</h3>
+                                    </a>
+                                    <div class="price">
+                                        <del>$199.00</del>
+                                        <ins>$293.00</ins>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 item">
+                            <div class="gadget_pr_item two">
+                                <div class="pr_img">
+                                    <div class="badge hot">Hot</div>
+                                    <a href="product-details-1.html"><img src="img/home-shop/tr_pr2.jpg" alt=""></a>
+                                    <div class="hover_content">
+                                        <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                        <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="single_pr_details">
+                                    <a href="product-details-1.html">
+                                        <h3>Smart Speaker</h3>
+                                    </a>
+                                    <div class="price">
+                                        <del>$199.00</del>
+                                        <ins>$293.00</ins>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 item">
+                            <div class="gadget_pr_item one">
+                                <div class="pr_img">
+                                    <div class="badge new">New</div>
+                                    <a href="product-details-1.html"><img src="img/home-shop/tr_pr3.jpg" alt=""></a>
+                                    <div class="hover_content">
+                                        <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                        <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="single_pr_details">
+                                    <a href="product-details-1.html">
+                                        <h3>Smart Speaker</h3>
+                                    </a>
+                                    <div class="price">
+                                        <del>$199.00</del>
+                                        <ins>$293.00</ins>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 item">
+                            <div class="gadget_pr_item three">
+                                <div class="pr_img">
+                                    <div class="badge hot">Hot</div>
+                                    <a href="product-details-1.html"><img src="img/home-shop/tr_pr4.jpg" alt=""></a>
+                                    <div class="hover_content">
+                                        <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                        <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="single_pr_details">
+                                    <a href="product-details-1.html">
+                                        <h3>Smart Speaker</h3>
+                                    </a>
+                                    <div class="price">
+                                        <del>$199.00</del>
+                                        <ins>$293.00</ins>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 item">
+                            <div class="gadget_pr_item four">
+                                <div class="pr_img">
+                                    <div class="badge new">New</div>
+                                    <a href="product-details-1.html"><img src="img/home-shop/tr_pr5.jpg" alt=""></a>
+                                    <div class="hover_content">
+                                        <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                        <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="single_pr_details">
+                                    <a href="product-details-1.html">
+                                        <h3>Smart Speaker</h3>
+                                    </a>
+                                    <div class="price">
+                                        <del>$199.00</del>
+                                        <ins>$293.00</ins>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 item">
+                            <div class="gadget_pr_item one">
+                                <div class="pr_img">
+                                    <div class="badge hot">Hot</div>
+                                    <a href="product-details-1.html"><img src="img/home-shop/tr_pr1.jpg" alt=""></a>
+                                    <div class="hover_content">
+                                        <a href="#"><img src="img/home-gadget/cart_icon.png" alt=""></a>
+                                        <a href="#"><img src="img/home-gadget/heart_icon.png" alt=""></a>
+                                    </div>
+                                </div>
+                                <div class="single_pr_details">
+                                    <a href="product-details-1.html">
+                                        <h3>Smart Speaker</h3>
+                                    </a>
+                                    <div class="price">
+                                        <del>$199.00</del>
+                                        <ins>$293.00</ins>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="shop_partner_logo_area sec_pad">
+            <div class="container">
+                <div class="shop_title text-center">
+                    <h2>Top Brands</h2>
+                </div>
+                <div class="partner_logo_area_four">
+                    <div class="row partner_info">
+                        <div class="logo_item">
+                            <a href="#"><img src="img/home-shop/clients_logo1.png" alt=""></a>
+                        </div>
+                        <div class="logo_item">
+                            <a href="#"><img src="img/home-shop/clients_logo2.png" alt=""></a>
+                        </div>
+                        <div class="logo_item">
+                            <a href="#"><img src="img/home-shop/clients_logo3.png" alt=""></a>
+                        </div>
+                        <div class="logo_item">
+                            <a href="#"><img src="img/home-shop/clients_logo4.png" alt=""></a>
+                        </div>
+                        <div class="logo_item">
+                            <a href="#"><img src="img/home-shop/clients_logo5.png" alt=""></a>
+                        </div>
+                        <div class="logo_item">
+                            <a href="#"><img src="img/home-shop/clients_logo6.png" alt=""></a>
+                        </div>
+                        <div class="logo_item">
+                            <a href="#"><img src="img/home-shop/clients_logo7.png" alt=""></a>
+                        </div>
+                        <div class="logo_item">
+                            <a href="#"><img src="img/home-shop/clients_logo8.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gadget_shipping_area pb_60">
+            <div class="container">
+                <div class="br_bottom"></div>
+                <div class="row">
+                    <div class="col-md-4 col-6 wow fadeInUp">
+                        <div class="media g_shipping_item">
+                            <img src="img/home-gadget/policy-icon.png" alt="">
+                            <div class="media-body">
+                                <h4>30 Days Return Policy</h4>
+                                <p>Sure moneyback</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="media g_shipping_item">
+                            <img src="img/home-gadget/express-icon.png" alt="">
+                            <div class="media-body">
+                                <h4>Express Delivery</h4>
+                                <p>Sure moneyback</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="media g_shipping_item">
+                            <img src="img/home-gadget/secure-icon.png" alt="">
+                            <div class="media-body">
+                                <h4>Exclusive Products</h4>
+                                <p>Premium Products</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer_area shop_footer_area">
+            <div class="footer_top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget company_widget">
+                                <a href="index.html" class="f-logo">
+                                    <img src="img/home-shop/w_logo.png"
+                                         srcset="img/home-shop/w_logo@2x.png 2x" alt="">
+                                </a>
+                                <div class="widget-wrap">
+                                    <p>Email: <a href="mailto:saasland@gmail.com">saasland@gmail.com</a></p>
+                                    <p>Phone: <a href="tel:948256347968">+948 256 347 968</a></p>
+                                </div>
+                                <form action="#" class="f_subscribe mailchimp" method="post">
+                                    <input type="text" name="EMAIL" class="form-control memail"
+                                           placeholder="Subscribe for Updates">
+                                    <button class="btn btn-submit" type="submit"><i class="ti-arrow-right"></i></button>
+                                    <p class="mchimp-errmessage" style="display: none;"></p>
+                                    <p class="mchimp-sucmessage" style="display: none;"></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_100">
+                                <h3 class="f-title mb_40">About Us</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#">Company</a></li>
+                                    <li><a href="#">Leadership</a></li>
+                                    <li><a href="#">Diversity</a></li>
+                                    <li><a href="#">Jobs</a></li>
+                                    <li><a href="#">Press</a></li>
+                                    <li><a href="#">Wavelength</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70">
+                                <h3 class="f-title mb_40">Workflow Solutions</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#">Project Management</a></li>
+                                    <li><a href="#">Agile</a></li>
+                                    <li><a href="#">Task Management</a></li>
+                                    <li><a href="#">Reporting</a></li>
+                                    <li><a href="#">Work Tracking</a></li>
+                                    <li><a href="#">See All Uses</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f_widget about-widget pl_70">
+                                <h3 class="f-title mb_40">Team Solutions</h3>
+                                <ul class="list-unstyled f_list">
+                                    <li><a href="#">Engineering</a></li>
+                                    <li><a href="#">Designers</a></li>
+                                    <li><a href="#">Sales</a></li>
+                                    <li><a href="#">Developers</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                    <li><a href="#">See All Teams</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-5 col-sm-6">
+                            <p class="mb-0 f_400">Copyright © 2020 Desing by <a href="#">DroitThemes</a></p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="f_social_icon_two text-center">
+                                <a href="#"><i class="ti-facebook"></i></a>
+                                <a href="#"><i class="ti-twitter-alt"></i></a>
+                                <a href="#"><i class="ti-vimeo-alt"></i></a>
+                                <a href="#"><i class="ti-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <ul class="list-unstyled f_menu text-right">
+                                <li><a href="#">Terms of Use</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/propper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/vendors/bootstrap-selector/js/bootstrap-select.min.js"></script>
+    <script src="/vendors/wow/wow.min.js"></script>
+    <script src="/vendors/sckroller/jquery.parallax-scroll.js"></script>
+    <script src="/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="/vendors/isotope/isotope-min.js"></script>
+    <script src="/vendors/magnify-pop/jquery.magnific-popup.min.js"></script>
+    <script src="/vendors/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="/js/plugins.js"></script>
+    <script src="/vendors/slick/slick.min.js"></script>
+    <script src="/js/comming-soon.js"></script>
+    <script src="/vendors/splitting/splitting.min.js"></script>
+    <script src="/js/main.js"></script>
+</body>
