@@ -2,5 +2,74 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Product>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = null;
+    Layout = "MasterPage.cshtml";
+    var ProductImages = Model.Images;
 }
+ <section class="product_details_area bg_color sec_pad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="product_slider">
+                            <div class="pr_image owl-carousel">
+                                @foreach (var item in ProductImages)
+                                {
+                                    <div class="item">
+                                        <img src="@item.Url()" alt="">
+                                    </div>
+                                }
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="pr_details">
+                            <a href="#" class="pr_title f_size_22 f_500 f_p">
+                                @Model.ProductTitle
+                            </a>
+                            <div class="price">
+                            
+                                <ins><span class="woocommerce-Price-amount amount"><span
+                                                                                       class="woocommerce-Price-currencySymbol">$</span>@Model.ProductPrice</span></ins>
+                            </div>
+                            @if (Model.InStock)
+                            {
+                                <span class="stock">in stock</span>
+                            }
+                          
+                            <p class="f_400 f_size_15">@Model.Summary</p>
+                            <div class="product-qty">
+                                <button class="ar_top" type="button"><i class="ti-angle-up"></i></button>
+                                <input type="number" name="qty" id="qty" value="1" title="Quantity:"
+                                    class="manual-adjust">
+                                <button class="ar_down" type="button"><i class="ti-angle-down"></i></button>
+                            </div>
+                            <div class="cart_button">
+                                <a href="#" class="cart_btn">Add to Cart</a>
+                                <a href="#" class="wish_list" data-toggle="tooltip" data-placement="top"
+                                    title="ADD WISH LIST"><i class="ti-heart"></i></a>
+                            </div>
+                            <div class="pr_footer mt_40 mb-30">
+                                <ul class="product_meta list-unstyled">
+                                    <li><span>SKU:</span>@Model.SKU</li>
+                                    <li><span>Category:</span>website,app,saasland</li>
+                                    <li><span>Tags:</span><a href="#">app,</a><a href="#">web,</a><a href="#">landing
+                                            page</a></li>
+                                </ul>
+                                <div class="share-link">
+                                    <label>Share ON: </label>
+                                    <ul class="social-icon list-unstyled">
+                                        <li><a class="facebook" title="Facebook" href="#"><i class="ti-facebook">
+                                                </i></a></li>
+                                        <li><a class="twitter" title="Twitter" href="#"><i class="ti-twitter"> </i></a>
+                                        </li>
+                                        <li><a class="linkedin" title="Linkedin" href="#"><i class="ti-pinterest">
+                                                </i></a></li>
+                                        <li><a class="rss" title="RSS" href="#"><i class="ti-linkedin"> </i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

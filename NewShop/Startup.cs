@@ -1,3 +1,5 @@
+using NewShop.Composers;
+
 namespace NewShop
 {
     public class Startup
@@ -33,6 +35,7 @@ namespace NewShop
                 .AddBackOffice()
                 .AddWebsite()
                 .AddComposers()
+                .Register()
                 .Build();
         }
 

@@ -141,7 +141,7 @@
             @if (@Model.Ancestors().Any())
             {
                 <div class="breadcrumb_content_two text-center">
-                    <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">News</h1>
+                    <h1 class="f_p f_700 f_size_50 w_color l_height50 mb_20">@Model.Name</h1>
                     <ol class="breadcrumb">
                         @foreach (var ancestor in Model.Ancestors().Reverse())
                         {
