@@ -1,7 +1,8 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
 @{
-	Layout = null;
+    Layout = null;
+    var homepage = Umbraco.ContentAtRoot().FirstOrDefault().Url();
 }
 <html lang="en">
 
@@ -85,7 +86,7 @@
         </div>
     </div>
     <div class="body_wrapper">
-        <header class="header_area">
+    @*    <header class="header_area">
             <nav class="navbar navbar-expand-lg menu_one menu_four menu_poss">
                 <div class="container">
                     <a class="navbar-brand sticky_logo" href="#">
@@ -123,6 +124,101 @@
                     </div>
                 </div>
             </nav>
+        </header>*@
+        <header class="header_area">
+            <nav class="navbar navbar-expand-lg menu_one menu_four shop_menu">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="/img/home-shop/logodark.png"
+                             srcset="img/home-shop/logodark@2x.png 2x" alt="logo">
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu_toggle">
+                            <span class="hamburger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                            <span class="hamburger-cross">
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav menu ml-auto mr-auto">
+                            <li class="dropdown submenu nav-item">
+                                <a class="nav-link dropdown-toggle" href="@homepage" role="button" data-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false" onclick="window.location.href='@homepage'">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="dropdown submenu nav-item">
+                                <a title="Pages" class="dropdown-toggle nav-link"
+                                   data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"
+                                   href="/Shop" onclick="window.location.href='/shop'">Shop </a>
+                            </li>
+                        </ul>
+                        <div class="alter_nav">
+                            <ul class="navbar-nav search_cart menu">
+                                <li class="nav-item search">
+                                    <a class="nav-link search-btn" href="javascript:void(0);">
+                                        <i class="ti-search"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item shpping-cart dropdown submenu">
+                                    <a class="cart-btn nav-link dropdown-toggle" href="#" role="button"
+                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="ti-shopping-cart"></i><span class="num">2</span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="cart-single-item clearfix">
+                                            <div class="cart-img">
+                                                <img src="/img/cart1.jpg" alt="styler">
+                                            </div>
+                                            <div class="cart-content text-left">
+                                                <p class="cart-title"><a href="#">Pale pink and black buttoned dress</a></p>
+                                                <p><del>$400.00</del> - $350.00</p>
+                                            </div>
+                                            <div class="cart-remove">
+                                                <a href="#" class="action"><span class="ti-close"></span></a>
+                                            </div>
+                                        </li>
+                                        <li class="cart-single-item clearfix">
+                                            <div class="cart-img">
+                                                <img src="/img/cart2.jpg" alt="styler">
+                                            </div>
+                                            <div class="cart-content text-left">
+                                                <p class="cart-title">
+                                                    <a href="#">Vera bradley lug- gage large duffel</a>
+                                                </p>
+                                                <p>$350.00</p>
+                                            </div>
+                                            <div class="cart-remove">
+                                                <a href="#" class="action"><span class="ti-close"></span></a>
+                                            </div>
+                                        </li>
+                                        <li class="cart_f">
+                                            <div class="cart-pricing">
+                                                <p class="total">
+                                                    Subtotal :<span class="p-total text-right">$358.00</span>
+                                                </p>
+                                            </div>
+                                            <div class="cart-button text-center">
+                                                <button class="btn btn-cart get_btn pink">View Cart</button>
+                                                <button class="btn btn-cart get_btn dark">Checkout</button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
         </header>
     </div>
     <section class="breadcrumb_area_two">
@@ -155,6 +251,20 @@
 
         </div>
     </section>
+    <form class="search_boxs" role="search">
+        <div class="search_box_inner">
+            <div class="close_icon">
+                <i class="icon_close"></i>
+            </div>
+            <div class="input-group">
+                <input type="text" name="search" class="form_control search-input" placeholder="Recipient's username"
+                       autofocus>
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button"><i class="icon_search"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
     @RenderBody()
     <script src="/js/jquery-3.6.0.min.js"></script>
     <script src="/js/propper.js"></script>

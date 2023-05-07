@@ -3,7 +3,7 @@
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
     Layout = "MasterPage.cshtml";
-    var ProductImages = Model.Images;
+    var productImages = Model.Images;
 }
  <section class="product_details_area bg_color sec_pad">
             <div class="container">
@@ -11,7 +11,7 @@
                     <div class="col-lg-6">
                         <div class="product_slider">
                             <div class="pr_image owl-carousel">
-                                @foreach (var item in ProductImages)
+                                @foreach (var item in productImages)
                                 {
                                     <div class="item">
                                         <img src="@item.Url()" alt="">
@@ -29,7 +29,7 @@
                             <div class="price">
                             
                                 <ins><span class="woocommerce-Price-amount amount"><span
-                                                                                       class="woocommerce-Price-currencySymbol">$</span>@Model.ProductPrice</span></ins>
+                                                                                       class="woocommerce-Price-currencySymbol"> ₦</span>@Model.ProductPrice</span></ins>
                             </div>
                             @if (Model.InStock)
                             {
